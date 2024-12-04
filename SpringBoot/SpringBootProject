@@ -1,0 +1,15 @@
+Spring Boot
+
+1. http://192.168.1.41:9898/login
+
+2. http://192.168.1.41:9898/api/clients
+
+3. http://192.168.1.41:9898/client/add
+
+
+
+wapiti -u http://192.168.1.41:9898
+
+vulnarability => content security policy
+voir code modification
+

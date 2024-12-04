@@ -1,0 +1,4 @@
+<script> window.location.href="https://www.google.com";</script>
+
+
+<script> alert('XSS')</script>
