@@ -12,4 +12,23 @@ wapiti -u http://192.168.1.41:9898
 
 vulnarability => content security policy
 voir code modification
+### Explication de ces deux faille xss
+
+Préconnisation pour le content
+
+add => http.headers().contentSecurityPolicy("default-src 'self'; script-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; frame-ancestors 'none';");
+	
+public class SpringConfigSecurity extends WebSecurityConfigurerAdapter{
+	
+	...
+	protected void configure(HttpSecurity http) throws Exception {
+		...
+
+		http.headers()
+			.contentSecurityPolicy("default-src 'self'; script-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; frame-ancestors 'none';");
+	}
+
+}
+
+
 
