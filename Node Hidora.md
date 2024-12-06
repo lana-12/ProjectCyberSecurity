@@ -147,10 +147,10 @@ Ces scan révèlent un accès SSH ouvert (port 22) : Cela pourrait permettre une
 - 998 ports filtrés : Cela peut indiquer un pare-feu actif ou une politique restrictive au niveau réseau.
 
 ### Recommandations
-Sécuriser le serveur SSH :Limiter l'accès à des adresses IP spécifiques
-Mettre à jour Jetty :Passer à une version plus récente ou envisager une solution alternative pour corriger d'éventuelles vulnérabilités.
-Désactiver les méthodes HTTP inutilisées, notamment TRACE.
-Analyser les configurations de pare-feu :S'assurer que seuls les ports nécessaires sont ouverts.
+- Sécuriser le serveur SSH :Limiter l'accès à des adresses IP spécifiques
+- Mettre à jour Jetty :Passer à une version plus récente ou envisager une solution alternative pour corriger d'éventuelles vulnérabilités.
+- ésactiver les méthodes HTTP inutilisées, notamment TRACE.
+- Analyser les configurations de pare-feu :S'assurer que seuls les ports nécessaires sont ouverts.
 
 
 
