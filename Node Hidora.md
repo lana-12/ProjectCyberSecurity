@@ -3,9 +3,9 @@
 
 *Cible : node179686-env-1839015-etudiant-d02-01.sh1.hidora.com*
 
-## 1. Test et Scan
+## 1. TestS et Scan
 
-###  Scan avec Nmap
+###  * Scan avec Nmap
 #### Tests effectués
 ##### 1. Scan réseau et détection des services :
 nmap scan  node179686-env-1839015-etudiant-d02-01.sh1.hidora.com 
@@ -113,8 +113,7 @@ PORT      STATE SERVICE    VERSION
 3366/tcp  open  tcpwrapped.....
 
 ##### 6. Analyse de la Sécurité d'OpenSSH 8.0 avec Searchsploit
-* Recherche des exploits connus dans la base de données Exploit-DB.
-searchsploit openssh 8.0
+- Recherche des exploits connus dans la base de données Exploit-DB: searchsploit openssh 8.0
 
 Exploits: No Results
 Shellcodes: No Results
@@ -149,13 +148,13 @@ Ces scan révèlent un accès SSH ouvert (port 22) : Cela pourrait permettre une
 ### Recommandations
 - Sécuriser le serveur SSH :Limiter l'accès à des adresses IP spécifiques
 - Mettre à jour Jetty :Passer à une version plus récente ou envisager une solution alternative pour corriger d'éventuelles vulnérabilités.
-- ésactiver les méthodes HTTP inutilisées, notamment TRACE.
+- Désactiver les méthodes HTTP inutilisées, notamment TRACE.
 - Analyser les configurations de pare-feu :S'assurer que seuls les ports nécessaires sont ouverts.
 
 
 
 
-### Scan avec HTTrack
+### * Scan avec HTTrack
 #### 1.Téléchargement du site:
 httrack http://node179686-env-1839015-etudiant-d02-01.sh1.hidora.com -O ./projectbigdata_copy
 
@@ -171,7 +170,7 @@ mirroring http://node179686-env-1839015-etudiant-d02-01.sh1.hidora.com -*.js wit
 Done.e179686-env-1839015-etudiant-d02-01.sh1.hidora.com/logs/yarn--resourcemanager-hadoop-master.out.2 (1524 bytes) - OK
 
 
-### Analyse de fichiers récupérés avec Foremost
+### * Analyse de fichiers récupérés avec Foremost
 
 
 
