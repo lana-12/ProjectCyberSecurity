@@ -1,18 +1,18 @@
 #  Rapport d'Analyse de Vulnérabilités et Préconisations
 
-## Introduction
+## 1. Introduction
 
-## Methodes et Tests
+## 2. Methodes et Tests
 
-### Projet SpringBoot
+### - Projet SpringBoot
 
-### App Laravel
+### - App Laravel
 
-### Node Hiodra : Projet Big Data
+### - Node Hiodra : Projet Big Data
 
-## Identifications des failles
+## 3. Identifications des failles
 
-## Préconisations et Recomandations 
+## 4. Préconisations et Recomandations 
 
 
 
