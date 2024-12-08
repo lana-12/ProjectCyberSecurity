@@ -95,9 +95,8 @@ Done.185.34.102.254/ (84753 bytes) -OK
 
 
 ## 2. Analyses
+##### a. Ports ouverts détectés :
 Les scans Nmap ont permis d'identifier les ports ouverts, les services en cours d'exécution, leurs versions et les éventuelles vulnérabilités associées.
-
-### a. Ports ouverts détectés :
 
 - 22/tcp (SSH) : Ce port est utilisé pour accéder au serveur à distance de manière sécurisée. S'il est mal configuré, il peut être exploité pour des attaques de force brute.
 - Risque : Moyen à élevé (selon la configuration de sécurité du service SSH).
@@ -119,12 +118,12 @@ Les scans Nmap ont permis d'identifier les ports ouverts, les services en cours 
 - Risque : Élevé si l'authentification et le chiffrement ne sont pas bien configurés.
 - Observation : Ce port est utilisé comme alternative au port 443. 
 
-### b. Vulnérabilités détectées :
+##### b. Vulnérabilités détectées :
 - La commande nmap --script vuln n'a pas renvoyé d'informations de vulnérabilités sur les ports détectés, mais cela ne signifie pas qu'il n'en existe pas.
 
 - Le service SSH (port 22) est une cible potentielle pour des attaques par force brute.
 
-### c. Analyse de l'attaque HTTrack
+##### c. Analyse de l'attaque HTTrack
 
 - Le contenu a été copié avec succès.
 - L'outil a copié un total de 84 753 octets (environ 85 Ko) du site, ce qui signifie que les fichiers (HTML,log.txt, images, cookies) sont accessibles sans restriction.
