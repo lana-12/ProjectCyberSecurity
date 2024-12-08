@@ -102,7 +102,7 @@ Les scans Nmap ont permis d'identifier les ports ouverts, les services en cours 
 - Risque : Moyen à élevé (selon la configuration de sécurité du service SSH).
 - Observation : Le service SSH est détecté comme actif. Il n'est pas précisé si l'accès est restreint par des listes d'adresses IP autorisées.
 
--80/tcp (HTTP) : Ce port sert à l'accès aux sites web en clair (non sécurisé). Il peut être sujet à des attaques de type interception (MITM) ou injection de scripts (XSS, etc.).
+-80/tcp (HTTP) : Ce port sert à l'accès aux sites web en clair (non sécurisé). Il peut être sujet à des attaques.
 - - Risque : Élevé si les connexions HTTP ne sont pas redirigées vers HTTPS.
 - - Observation : Le port est ouvert, ce qui indique la présence d'un serveur web.
 
