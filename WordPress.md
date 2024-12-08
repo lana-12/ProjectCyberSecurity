@@ -103,20 +103,20 @@ Les scans Nmap ont permis d'identifier les ports ouverts, les services en cours 
 - Observation : Le service SSH est détecté comme actif. Il n'est pas précisé si l'accès est restreint par des listes d'adresses IP autorisées.
 
 -80/tcp (HTTP) : Ce port sert à l'accès aux sites web en clair (non sécurisé). Il peut être sujet à des attaques.
-- - Risque : Élevé si les connexions HTTP ne sont pas redirigées vers HTTPS.
-- - Observation : Le port est ouvert, ce qui indique la présence d'un serveur web.
+  - Risque : Élevé si les connexions HTTP ne sont pas redirigées vers HTTPS.
+  - Observation : Le port est ouvert, ce qui indique la présence d'un serveur web.
 
 -443/tcp (HTTPS) : Ce port est utilisé pour des connexions chiffrées au serveur web. Sa sécurité dépend du certificat SSL/TLS utilisé.
-- - Risque : Faible si la configuration est correcte (certificat SSL valide, protocole sécurisé).
-- - Observation : Le port est actif
+  - Risque : Faible si la configuration est correcte (certificat SSL valide, protocole sécurisé).
+  - Observation : Le port est actif
 
 -4848/tcp (appserv-http) : Ce port est souvent utilisé pour l'administration de serveurs d'applications. Il permet des actions de configuration et de déploiement.
-- - Risque : Élevé, car un attaquant peut exploiter une interface d'administration mal protégée.
-- - Observation : Ce port est ouvert et accessible, ce qui peut exposer le serveur à des risques de compromission par des attaquants.
+  - Risque : Élevé, car un attaquant peut exploiter une interface d'administration mal protégée.
+  - Observation : Ce port est ouvert et accessible, ce qui peut exposer le serveur à des risques de compromission par des attaquants.
 
 -8443/tcp (https-alt) : Ce port est une alternative au port 443 pour les connexions HTTPS. Il est souvent utilisé par des interfaces d'administration ou des services web spécifiques.
-- - Risque : Élevé si l'authentification et le chiffrement ne sont pas bien configurés.
-- - Observation : Ce port est utilisé comme alternative au port 443. 
+  - Risque : Élevé si l'authentification et le chiffrement ne sont pas bien configurés.
+  - Observation : Ce port est utilisé comme alternative au port 443. 
 
 ##### b. Vulnérabilités détectées :
 - La commande nmap --script vuln n'a pas renvoyé d'informations de vulnérabilités sur les ports détectés, mais cela ne signifie pas qu'il n'en existe pas.
