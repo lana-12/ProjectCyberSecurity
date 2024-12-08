@@ -23,6 +23,8 @@ Le projet se structure autour de deux volets principaux :
 
 ### - Node Hiodra : Projet Big Data
 
+### - WordPress
+
 ## 3. Identifications des failles
 
 ## 4. Préconisations et Recomandations 
