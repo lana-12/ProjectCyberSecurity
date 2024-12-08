@@ -128,7 +128,7 @@ Les scans Nmap ont permis d'identifier les ports ouverts, les services en cours 
 - Le contenu a été copié avec succès.
 - L'outil a copié un total de 84 753 octets (environ 85 Ko) du site, ce qui signifie que les fichiers (HTML,log.txt, images, cookies) sont accessibles sans restriction.
 
-- Le log mentionne que des informations sensibles peuvent être présentes dans les fichiers hts-log.txt ou dans le dossier hts-cache. 
+- Les logs téléchargés contiennent, généralement, des informations sensibles qui peuvent être présentes dans les fichiers hts-log.txt ou dans le dossier hts-cache. 
 
 ## 3. Préconisations 
 -Sécurisation des ports : Restreindre l'accès aux ports sensibles (4848, 8443) via un pare-feu et limiter l'accès au SSH (port 22) aux IP de confiance.
