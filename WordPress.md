@@ -98,25 +98,25 @@ Done.185.34.102.254/ (84753 bytes) -OK
 ##### a. Ports ouverts détectés :
 Les scans Nmap ont permis d'identifier les ports ouverts, les services en cours d'exécution, leurs versions et les éventuelles vulnérabilités associées.
 
-- 22/tcp (SSH) : Ce port est utilisé pour accéder au serveur à distance de manière sécurisée. S'il est mal configuré, il peut être exploité pour des attaques de force brute.
+-22/tcp (SSH) : Ce port est utilisé pour accéder au serveur à distance de manière sécurisée. S'il est mal configuré, il peut être exploité pour des attaques de force brute.
 - Risque : Moyen à élevé (selon la configuration de sécurité du service SSH).
 - Observation : Le service SSH est détecté comme actif. Il n'est pas précisé si l'accès est restreint par des listes d'adresses IP autorisées.
 
 -80/tcp (HTTP) : Ce port sert à l'accès aux sites web en clair (non sécurisé). Il peut être sujet à des attaques de type interception (MITM) ou injection de scripts (XSS, etc.).
-- Risque : Élevé si les connexions HTTP ne sont pas redirigées vers HTTPS.
-- Observation : Le port est ouvert, ce qui indique la présence d'un serveur web.
+- - Risque : Élevé si les connexions HTTP ne sont pas redirigées vers HTTPS.
+- - Observation : Le port est ouvert, ce qui indique la présence d'un serveur web.
 
-- 443/tcp (HTTPS) : Ce port est utilisé pour des connexions chiffrées au serveur web. Sa sécurité dépend du certificat SSL/TLS utilisé.
-- Risque : Faible si la configuration est correcte (certificat SSL valide, protocole sécurisé).
-- Observation : Le port est actif
+-443/tcp (HTTPS) : Ce port est utilisé pour des connexions chiffrées au serveur web. Sa sécurité dépend du certificat SSL/TLS utilisé.
+- - Risque : Faible si la configuration est correcte (certificat SSL valide, protocole sécurisé).
+- - Observation : Le port est actif
 
-- 4848/tcp (appserv-http) : Ce port est souvent utilisé pour l'administration de serveurs d'applications. Il permet des actions de configuration et de déploiement.
-- Risque : Élevé, car un attaquant peut exploiter une interface d'administration mal protégée.
-- Observation : Ce port est ouvert et accessible, ce qui peut exposer le serveur à des risques de compromission par des attaquants.
+-4848/tcp (appserv-http) : Ce port est souvent utilisé pour l'administration de serveurs d'applications. Il permet des actions de configuration et de déploiement.
+- - Risque : Élevé, car un attaquant peut exploiter une interface d'administration mal protégée.
+- - Observation : Ce port est ouvert et accessible, ce qui peut exposer le serveur à des risques de compromission par des attaquants.
 
 -8443/tcp (https-alt) : Ce port est une alternative au port 443 pour les connexions HTTPS. Il est souvent utilisé par des interfaces d'administration ou des services web spécifiques.
-- Risque : Élevé si l'authentification et le chiffrement ne sont pas bien configurés.
-- Observation : Ce port est utilisé comme alternative au port 443. 
+- - Risque : Élevé si l'authentification et le chiffrement ne sont pas bien configurés.
+- - Observation : Ce port est utilisé comme alternative au port 443. 
 
 ##### b. Vulnérabilités détectées :
 - La commande nmap --script vuln n'a pas renvoyé d'informations de vulnérabilités sur les ports détectés, mais cela ne signifie pas qu'il n'en existe pas.
@@ -131,11 +131,11 @@ Les scans Nmap ont permis d'identifier les ports ouverts, les services en cours 
 - Le log mentionne que des informations sensibles peuvent être présentes dans les fichiers hts-log.txt ou dans le dossier hts-cache. 
 
 ## 3. Préconisations 
-- Sécurisation des ports : Restreindre l'accès aux ports sensibles (4848, 8443) via un pare-feu et limiter l'accès au SSH (port 22) aux IP de confiance.
+-Sécurisation des ports : Restreindre l'accès aux ports sensibles (4848, 8443) via un pare-feu et limiter l'accès au SSH (port 22) aux IP de confiance.
 
 -Renforcement des services web : Forcer l'utilisation de HTTPS (443) et désactiver HTTP (80) pour sécuriser les connexions.
 
 -Masquage des services : Configurer des bannières de service personnalisées pour éviter de révéler des informations sur les versions des services (tcpwrapped).
 
-- Protection du site web : Empêcher le mirroring du site avec des outils comme HTTrack.
+-Protection du site web : Empêcher le mirroring du site avec des outils comme HTTrack.
 
