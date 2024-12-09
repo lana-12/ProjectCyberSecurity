@@ -123,36 +123,6 @@ Shellcodes: No Results
 - OpenSSH 8.0 est relativement sécurisé.
 
 
-#### Resultats :
-998 ports TCP filtrés : Ils n'ont pas répondu à la requête Nmap (probablement bloqués par un pare-feu).
-2 ports TCP ouverts : 22 et 80.
-
-* Port 22/tcp (SSH)
-Service : SSH (Secure Shell), un protocole permettant une connexion sécurisée à distance.
-* Port 80/tcp (HTTP)
-Service : Serveur HTTP avec Jetty 6.1.26, une implémentation légère et performante utilisée notamment pour des applications web.
-Titre de la page web : Hadoop Administration. Cela suggère que l'hôte est un serveur Hadoop 
-* Méthodes HTTP détectées :
-TRACE : Méthode potentiellement risquée car elle pourrait être exploitée pour des attaques de type Cross-Site Tracing (XST). Cette méthode est généralement désactivée pour des raisons de sécurité.
-En-tête HTTP : Le serveur indique clairement qu'il utilise Jetty(6.1.26).
-
--  D'aprés l'analyse complete de scan nmap, plusieurs ports sont ouverts sur l'hôte node179686-env-1839015-etudiant-d02-01.sh1.hidora.com, mais ces ports sont tous marqués comme "tcpwrapped". Cela signifie qu'ils sont protégés par un mécanisme de sécurité qui enveloppe les connexions TCP, ce qui empêche l'identification claire du service fonctionnant sur chaque port.
-- tcpwrapped : Cela signifie que les ports ouverts ont été détectés mais que nmap n'a pas pu identifier quel service ou application les utilise, à cause d'une protection de type "wrapper" qui intercepte les connexions avant qu'elles n'atteignent le service.
-
-### Conclusion :
-Ces scan révèlent un accès SSH ouvert (port 22) : Cela pourrait permettre une connexion distante sécurisée si les identifiants sont connus.
-- Un serveur HTTP vulnérable (port 80) : L'utilisation de la méthode HTTP TRACE pourrait poser des risques.
-- Jetty 6.1.26 est une version relativement ancienne (publiée en 2010), ce qui augmente les risques liés à des vulnérabilités non corrigées.
-- 998 ports filtrés : Cela peut indiquer un pare-feu actif ou une politique restrictive au niveau réseau.
-
-### Recommandations
-- Sécuriser le serveur SSH :Limiter l'accès à des adresses IP spécifiques
-- Mettre à jour Jetty :Passer à une version plus récente ou envisager une solution alternative pour corriger d'éventuelles vulnérabilités.
-- Désactiver les méthodes HTTP inutilisées, notamment TRACE.
-- Analyser les configurations de pare-feu :S'assurer que seuls les ports nécessaires sont ouverts.
-
-
-
 
 ### * Scan avec HTTrack
 #### 1.Téléchargement du site:
@@ -175,6 +145,29 @@ Done.e179686-env-1839015-etudiant-d02-01.sh1.hidora.com/logs/yarn--resourcemanag
 
 
 ## 2. Analyses
+998 ports TCP filtrés : Ils n'ont pas répondu à la requête Nmap (probablement bloqués par un pare-feu).
+2 ports TCP ouverts : 22 et 80.
 
+* Port 22/tcp (SSH)
+Service : SSH (Secure Shell), un protocole permettant une connexion sécurisée à distance.
+* Port 80/tcp (HTTP)
+Service : Serveur HTTP avec Jetty 6.1.26, une implémentation légère et performante utilisée notamment pour des applications web.
+Titre de la page web : Hadoop Administration. Cela suggère que l'hôte est un serveur Hadoop 
+* Méthodes HTTP détectées :
+TRACE : Méthode potentiellement risquée car elle pourrait être exploitée pour des attaques de type Cross-Site Tracing (XST). Cette méthode est généralement désactivée pour des raisons de sécurité.
+En-tête HTTP : Le serveur indique clairement qu'il utilise Jetty(6.1.26).
+
+-  D'aprés l'analyse complete de scan nmap, plusieurs ports sont ouverts sur l'hôte node179686-env-1839015-etudiant-d02-01.sh1.hidora.com, mais ces ports sont tous marqués comme "tcpwrapped". Cela signifie qu'ils sont protégés par un mécanisme de sécurité qui enveloppe les connexions TCP, ce qui empêche l'identification claire du service fonctionnant sur chaque port.
+- tcpwrapped : Cela signifie que les ports ouverts ont été détectés mais que nmap n'a pas pu identifier quel service ou application les utilise, à cause d'une protection de type "wrapper" qui intercepte les connexions avant qu'elles n'atteignent le service.
+
+Ces scan révèlent un accès SSH ouvert (port 22) : Cela pourrait permettre une connexion distante sécurisée si les identifiants sont connus.
+- Un serveur HTTP vulnérable (port 80) : L'utilisation de la méthode HTTP TRACE pourrait poser des risques.
+- Jetty 6.1.26 est une version relativement ancienne (publiée en 2010), ce qui augmente les risques liés à des vulnérabilités non corrigées.
+- 998 ports filtrés : Cela peut indiquer un pare-feu actif ou une politique restrictive au niveau réseau.
 
 ## 3. Préconisations 
+
+- Sécuriser le serveur SSH :Limiter l'accès à des adresses IP spécifiques
+- Mettre à jour Jetty :Passer à une version plus récente ou envisager une solution alternative pour corriger d'éventuelles vulnérabilités.
+- Désactiver les méthodes HTTP inutilisées, notamment TRACE.
+- Analyser les configurations de pare-feu :S'assurer que seuls les ports nécessaires sont ouverts.
