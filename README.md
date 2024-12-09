@@ -46,6 +46,8 @@ Port : http://185.34.102.254
 - Httrack
 - Foremost
 - Metasploit
+- Wapiti
+- Sqlmap
 - VirtualBox
 - Kali-linux
 
