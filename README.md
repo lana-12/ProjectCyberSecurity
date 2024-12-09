@@ -1,4 +1,10 @@
-Projet Cybersecurity
+# Projet Cybersecurity
+
+## Collaborateurs
+
+- Faiza MNASRI
+- Virginie GIACOMETTI
+- Alae EN NASYRY
 
 
 ## 1. Introduction
