@@ -41,12 +41,12 @@ Cible : node179686-env-1839015-etudiant-d02-01.sh1.hidora.com
 Port : http://185.34.102.254
 
 ## 3. Methodes et Tests
-Nmap
-Httrack
-Foremost
-Metasploit
-VirtualBox
-Kali-linux
+- Nmap
+- Httrack
+- Foremost
+- Metasploit
+- VirtualBox
+- Kali-linux
 
 
 ## 4. Cloner le dépôt :
